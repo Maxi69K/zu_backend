@@ -31,6 +31,9 @@ app.use('/api/auth', authRoute)
 app.use('/api/product', productRoute);
 app.use('/api/mail', mailRoute);
 app.use('/api/user', userRoute);
+app.get('/', (req, res) => {
+    res.send('Server is working.');
+})
 
 app.listen(portNumber, err => {
     if (err) {
